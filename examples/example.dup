@@ -85,6 +85,18 @@
 ## Default:
 # password = 
 
+## gpgoptions
+## this option configures the --gpg-options passed to gpg while 
+## encrypting the archives. This can be used to speed up archive creation
+## at the cost of using less compression. This will speed up backups on 
+## lower end systems with fast internet access where archive creation takes
+## much longer than upload of the archives
+##
+## example gpgoptions = "--compress-level=1"
+##
+## Default:
+# gpgoptions = ""
+
 ######################################################
 ## source section
 ## (where the files to be backed up are coming from)

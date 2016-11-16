@@ -15,6 +15,7 @@ getconf password
 getconf sign no
 getconf encryptkey
 getconf signkey
+getconf gpgoptions ""
 
 setsection source
 getconf include
@@ -97,7 +98,7 @@ fi
 ### initialize $execstr*
 execstr_precmd=
 execstr_command=
-execstr_options="$options --no-print-statistics"
+execstr_options="$options --no-print-statistics --gpg-options=$gpgoptions"
 execstr_source=
 if [ -n "$desturl" ]; then
    [ -z "$destuser" ] || warning 'the configured destuser is ignored since desturl is set'
